@@ -2,24 +2,53 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
+import 'package:video_thumbnail/video_thumbnail.dart';
 
 class CoachVideoThumbCache {
   CoachVideoThumbCache._();
   static final Map<String, Future<Uint8List?>> _futures = <String, Future<Uint8List?>>{};
 
   static Future<Uint8List?> assetFirstFrame(String assetPath) {
-    return _futures.putIfAbsent(
-      'a:$assetPath',
-      () => Future<Uint8List?>.value(null),
-    );
+    return _futures.putIfAbsent('a:$assetPath', () => _fromAsset(assetPath));
   }
 
   static Future<Uint8List?> fileFirstFrame(String filePath) {
-    return _futures.putIfAbsent(
-      'f:$filePath',
-      () => Future<Uint8List?>.value(null),
-    );
+    return _futures.putIfAbsent('f:$filePath', () => _fromFile(filePath));
+  }
+
+  static Future<Uint8List?> _fromAsset(String assetPath) async {
+    try {
+      final ByteData data = await rootBundle.load(assetPath);
+      final Directory dir = await getTemporaryDirectory();
+      final File f = File('${dir.path}/coach_asset_${assetPath.hashCode.abs()}.mp4');
+      await f.writeAsBytes(data.buffer.asUint8List(), flush: true);
+      return VideoThumbnail.thumbnailData(
+        video: f.path,
+        imageFormat: ImageFormat.PNG,
+        maxWidth: 720,
+        quality: 90,
+        timeMs: 1,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  static Future<Uint8List?> _fromFile(String path) async {
+    try {
+      return VideoThumbnail.thumbnailData(
+        video: path,
+        imageFormat: ImageFormat.PNG,
+        maxWidth: 720,
+        quality: 90,
+        timeMs: 1,
+      );
+    } catch (_) {
+      return null;
+    }
   }
 }
 

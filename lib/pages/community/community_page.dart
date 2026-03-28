@@ -52,7 +52,6 @@ class CommunityPage extends StatefulWidget {
 
 class _CommunityPageState extends State<CommunityPage> {
   List<_CoachManifestEntry> _coaches = <_CoachManifestEntry>[];
-  String? _firstCoachIdForVideo;
   bool _loading = true;
   String? _error;
 
@@ -80,6 +79,15 @@ class _CommunityPageState extends State<CommunityPage> {
     return _coaches.where((c) => !mod.isHidden(c.id)).toList();
   }
 
+  String? _firstVisibleCoachIdWithVideo(List<_CoachManifestEntry> visible) {
+    for (final _CoachManifestEntry c in visible) {
+      if (c.video.isNotEmpty) {
+        return c.id;
+      }
+    }
+    return null;
+  }
+
   Future<void> _loadManifest() async {
     setState(() {
       _loading = true;
@@ -105,7 +113,6 @@ class _CommunityPageState extends State<CommunityPage> {
       }
       setState(() {
         _coaches = list;
-        _firstCoachIdForVideo = list.isNotEmpty ? list.first.id : null;
         _loading = false;
       });
     } catch (e) {
@@ -240,6 +247,7 @@ class _CommunityPageState extends State<CommunityPage> {
     }
 
     final List<_CoachManifestEntry> visible = _visibleCoaches();
+    final String? firstVisibleVideoCoachId = _firstVisibleCoachIdWithVideo(visible);
     if (visible.isEmpty) {
       return Center(
         child: Padding(
@@ -277,8 +285,9 @@ class _CommunityPageState extends State<CommunityPage> {
         separatorBuilder: (_, __) => const SizedBox(height: 16),
         itemBuilder: (BuildContext context, int index) {
           final _CoachManifestEntry c = visible[index];
-          final bool showVideo = _firstCoachIdForVideo != null &&
-              c.id == _firstCoachIdForVideo;
+          final bool showVideo = firstVisibleVideoCoachId != null &&
+              c.id == firstVisibleVideoCoachId &&
+              c.video.isNotEmpty;
           return _CoachFeedCard(
             coach: c,
             showVideo: showVideo,
