@@ -864,11 +864,6 @@ class CoachDetailPage extends StatelessWidget {
     _showCoachModerationActionSheet(
       context,
       entry,
-      afterBlacklistOrBlock: () {
-        if (context.mounted) {
-          Navigator.of(context).pop(true);
-        }
-      },
     );
   }
 }

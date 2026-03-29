@@ -79,14 +79,10 @@ class _CommunityPageState extends State<CommunityPage> {
     return _coaches.where((c) => !mod.isHidden(c.id)).toList();
   }
 
-  String? _firstVisibleCoachIdWithVideo(List<_CoachManifestEntry> visible) {
-    for (final _CoachManifestEntry c in visible) {
-      if (c.video.isNotEmpty) {
-        return c.id;
-      }
-    }
-    return null;
-  }
+  /// Only the first coach in [coaches_manifest.json] order may show video.
+  /// If that coach is blocked/muted/hidden, no other post takes over the video slot.
+  String? get _manifestFirstCoachId =>
+      _coaches.isEmpty ? null : _coaches.first.id;
 
   Future<void> _loadManifest() async {
     setState(() {
@@ -247,7 +243,7 @@ class _CommunityPageState extends State<CommunityPage> {
     }
 
     final List<_CoachManifestEntry> visible = _visibleCoaches();
-    final String? firstVisibleVideoCoachId = _firstVisibleCoachIdWithVideo(visible);
+    final String? videoSlotCoachId = _manifestFirstCoachId;
     if (visible.isEmpty) {
       return Center(
         child: Padding(
@@ -285,8 +281,8 @@ class _CommunityPageState extends State<CommunityPage> {
         separatorBuilder: (_, __) => const SizedBox(height: 16),
         itemBuilder: (BuildContext context, int index) {
           final _CoachManifestEntry c = visible[index];
-          final bool showVideo = firstVisibleVideoCoachId != null &&
-              c.id == firstVisibleVideoCoachId &&
+          final bool showVideo = videoSlotCoachId != null &&
+              c.id == videoSlotCoachId &&
               c.video.isNotEmpty;
           return _CoachFeedCard(
             coach: c,

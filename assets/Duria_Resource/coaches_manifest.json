@@ -2,114 +2,114 @@
   "version": 1,
   "coaches": [
     {
-      "id": "duria_coach_02",
-      "category": "realPerson",
-      "nickname": "Zhou Hang",
-      "tagline": "Functional training · Power development",
-      "skills": ["Functional training", "Power", "Agility ladder", "Med ball", "Warm-up activation"],
-      "avatar": "assets/Duria_Resource/coach_02/coach_02_avatar.webp",
-      "gallery": [
-        "assets/Duria_Resource/coach_02/coach_02_gallery_01.webp",
-        "assets/Duria_Resource/coach_02/coach_02_gallery_02.webp",
-        "assets/Duria_Resource/coach_02/coach_02_gallery_03.webp"
-      ],
-      "video": "assets/Duria_Resource/coach_02/coach_02_video.mp4"
-    },
-    {
       "id": "duria_coach_04",
       "category": "realPerson",
-      "nickname": "Shen Zhe",
+      "nickname": "BLAZE",
       "tagline": "Fat-loss cardio · HIIT small group",
       "skills": ["HIIT", "Fat-loss cardio", "Kettlebell", "Battle ropes", "Fitness testing"],
-      "avatar": "assets/Duria_Resource/coach_04/coach_04_avatar.webp",
+      "avatar": "assets/Duria_Resource/coach_04/coach_04_avatar.png",
       "gallery": [
-        "assets/Duria_Resource/coach_04/coach_04_gallery_01.webp",
-        "assets/Duria_Resource/coach_04/coach_04_gallery_02.webp",
-        "assets/Duria_Resource/coach_04/coach_04_gallery_03.webp"
+        "assets/Duria_Resource/coach_04/coach_04_gallery_01.png",
+        "assets/Duria_Resource/coach_04/coach_04_gallery_02.png",
+        "assets/Duria_Resource/coach_04/coach_04_gallery_03.png"
       ],
       "video": "assets/Duria_Resource/coach_04/coach_04_video.mp4"
     },
     {
+      "id": "duria_coach_02",
+      "category": "realPerson",
+      "nickname": "AXEL",
+      "tagline": "Functional training · Power development",
+      "skills": ["Functional training", "Power", "Agility ladder", "Med ball", "Warm-up activation"],
+      "avatar": "assets/Duria_Resource/coach_02/coach_02_avatar.png",
+      "gallery": [
+        "assets/Duria_Resource/coach_02/coach_02_gallery_01.png",
+        "assets/Duria_Resource/coach_02/coach_02_gallery_02.png",
+        "assets/Duria_Resource/coach_02/coach_02_gallery_03.png"
+      ],
+      "video": "assets/Duria_Resource/coach_02/coach_02_video.mp4"
+    },
+    {
       "id": "duria_coach_03",
       "category": "realPerson",
-      "nickname": "Han Mu",
+      "nickname": "PACE",
       "tagline": "Running endurance · Heart-rate rhythm",
       "skills": ["Running form", "Cardio endurance", "Interval runs", "Breathing rhythm", "Post-race recovery"],
-      "avatar": "assets/Duria_Resource/coach_03/coach_03_avatar.webp",
+      "avatar": "assets/Duria_Resource/coach_03/coach_03_avatar.png",
       "gallery": [
-        "assets/Duria_Resource/coach_03/coach_03_gallery_01.webp",
-        "assets/Duria_Resource/coach_03/coach_03_gallery_02.webp",
-        "assets/Duria_Resource/coach_03/coach_03_gallery_03.webp"
+        "assets/Duria_Resource/coach_03/coach_03_gallery_01.png",
+        "assets/Duria_Resource/coach_03/coach_03_gallery_02.png",
+        "assets/Duria_Resource/coach_03/coach_03_gallery_03.png"
       ],
       "video": "assets/Duria_Resource/coach_03/coach_03_video.mp4"
     },
     {
       "id": "duria_coach_05",
       "category": "realPerson",
-      "nickname": "Xu Lan",
+      "nickname": "MIRA",
       "tagline": "Custom plans · Movement coaching",
       "skills": ["Periodization", "Form cues", "Home workouts", "Stretch & recovery", "Lifestyle tips"],
-      "avatar": "assets/Duria_Resource/coach_05/coach_05_avatar.webp",
+      "avatar": "assets/Duria_Resource/coach_05/coach_05_avatar.png",
       "gallery": [
-        "assets/Duria_Resource/coach_05/coach_05_gallery_01.webp",
-        "assets/Duria_Resource/coach_05/coach_05_gallery_02.webp",
-        "assets/Duria_Resource/coach_05/coach_05_gallery_03.webp"
+        "assets/Duria_Resource/coach_05/coach_05_gallery_01.png",
+        "assets/Duria_Resource/coach_05/coach_05_gallery_02.png",
+        "assets/Duria_Resource/coach_05/coach_05_gallery_03.png"
       ],
       "video": "assets/Duria_Resource/coach_05/coach_05_video.mp4"
     },
     {
       "id": "duria_coach_06",
       "category": "realPerson",
-      "nickname": "Jiang Yao",
+      "nickname": "FORGE",
       "tagline": "Strength progress · Blocks & intensity",
       "skills": ["Block training", "Intensity control", "Strength progress", "Fatigue management", "Nutrition nudges"],
-      "avatar": "assets/Duria_Resource/coach_06/coach_06_avatar.webp",
+      "avatar": "assets/Duria_Resource/coach_06/coach_06_avatar.png",
       "gallery": [
-        "assets/Duria_Resource/coach_06/coach_06_gallery_01.webp",
-        "assets/Duria_Resource/coach_06/coach_06_gallery_02.webp",
-        "assets/Duria_Resource/coach_06/coach_06_gallery_03.webp"
+        "assets/Duria_Resource/coach_06/coach_06_gallery_01.png",
+        "assets/Duria_Resource/coach_06/coach_06_gallery_02.png",
+        "assets/Duria_Resource/coach_06/coach_06_gallery_03.png"
       ],
       "video": "assets/Duria_Resource/coach_06/coach_06_video.mp4"
     },
     {
       "id": "duria_coach_01",
       "category": "realPerson",
-      "nickname": "Lin Rui",
+      "nickname": "IRON",
       "tagline": "Strength & posture · 1-on-1",
       "skills": ["Barbell strength", "Core stability", "Posture correction", "Hypertrophy", "Squat & deadlift"],
-      "avatar": "assets/Duria_Resource/coach_01/coach_01_avatar.webp",
+      "avatar": "assets/Duria_Resource/coach_01/coach_01_avatar.png",
       "gallery": [
-        "assets/Duria_Resource/coach_01/coach_01_gallery_01.webp",
-        "assets/Duria_Resource/coach_01/coach_01_gallery_02.webp",
-        "assets/Duria_Resource/coach_01/coach_01_gallery_03.webp"
+        "assets/Duria_Resource/coach_01/coach_01_gallery_01.png",
+        "assets/Duria_Resource/coach_01/coach_01_gallery_02.png",
+        "assets/Duria_Resource/coach_01/coach_01_gallery_03.png"
       ],
       "video": "assets/Duria_Resource/coach_01/coach_01_video.mp4"
     },
     {
       "id": "duria_coach_07",
       "category": "realPerson",
-      "nickname": "Su Cheng",
+      "nickname": "FLOW",
       "tagline": "Mobility & rehab · Low impact",
       "skills": ["Joint mobility", "Low-impact cardio", "Mat work", "Breathing drills", "Sleep habits"],
-      "avatar": "assets/Duria_Resource/coach_07/coach_07_avatar.webp",
+      "avatar": "assets/Duria_Resource/coach_07/coach_07_avatar.png",
       "gallery": [
-        "assets/Duria_Resource/coach_07/coach_07_gallery_01.webp",
-        "assets/Duria_Resource/coach_07/coach_07_gallery_02.webp",
-        "assets/Duria_Resource/coach_07/coach_07_gallery_03.webp"
+        "assets/Duria_Resource/coach_07/coach_07_gallery_01.png",
+        "assets/Duria_Resource/coach_07/coach_07_gallery_02.png",
+        "assets/Duria_Resource/coach_07/coach_07_gallery_03.png"
       ],
       "video": "assets/Duria_Resource/coach_07/coach_07_video.mp4"
     },
     {
       "id": "duria_coach_08",
       "category": "realPerson",
-      "nickname": "Lu Che",
+      "nickname": "SKIP",
       "tagline": "Full-body circuits · Beginner friendly",
       "skills": ["Full-body circuits", "Bodyweight", "Step training", "Core basics", "Training logs"],
-      "avatar": "assets/Duria_Resource/coach_08/coach_08_avatar.webp",
+      "avatar": "assets/Duria_Resource/coach_08/coach_08_avatar.png",
       "gallery": [
-        "assets/Duria_Resource/coach_08/coach_08_gallery_01.webp",
-        "assets/Duria_Resource/coach_08/coach_08_gallery_02.webp",
-        "assets/Duria_Resource/coach_08/coach_08_gallery_03.webp"
+        "assets/Duria_Resource/coach_08/coach_08_gallery_01.png",
+        "assets/Duria_Resource/coach_08/coach_08_gallery_02.png",
+        "assets/Duria_Resource/coach_08/coach_08_gallery_03.png"
       ],
       "video": "assets/Duria_Resource/coach_08/coach_08_video.mp4"
     }
